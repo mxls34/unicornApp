@@ -6,11 +6,117 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="295dp"
+            android:layout_height="wrap_content"
+            android:text="Unicorn Delivery"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="34sp"
+
+            android:layout_marginRight="50dp"/>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/baseline_shopping_cart_24"
+            />
+
+    </LinearLayout>
 
     <TextView
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select your location" />
+
+    <Spinner
+        android:id="@+id/location"
+        android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_marginBottom="10dp"/>
+
+<!--Category-->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"/>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="Popular Restaurants" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="382dp"
+        android:orientation="vertical">
+
+<!--Popular-->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <LinearLayout
+                android:id="@+id/popular"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"/>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Food" />
+
+<!--Food-->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/food"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"/>
+
+        </HorizontalScrollView>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:itemBackground="@color/design_default_color_secondary"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="#3949AB"
+        app:labelVisibilityMode="auto"
+        app:menu="@menu/bottom_navigation_menu" />
+
 
 </LinearLayout>

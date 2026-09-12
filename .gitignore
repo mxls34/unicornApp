@@ -16,3 +16,4 @@ local.properties
 hs_err_pid3928.log
 .idea/gradle.xml
 .idea/misc.xml
+.idea/*
